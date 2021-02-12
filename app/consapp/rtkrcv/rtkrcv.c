@@ -1456,6 +1456,7 @@ static int open_sock(int port)
     memset(&addr,0,sizeof(addr));
     addr.sin_family=AF_INET;
     addr.sin_port=htons(port);
+    addr.sin_addr.s_addr = INADDR_ANY;
     
     if (bind(sock,(struct sockaddr *)&addr,sizeof(addr))<0) {
         fprintf(stderr,"bind error (%d)\n",errno);
