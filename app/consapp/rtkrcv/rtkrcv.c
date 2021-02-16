@@ -420,9 +420,11 @@ static int startsvr(vt_t *vt)
         else cmds_periodic[i]=s2[i];
     }
     /* confirm overwrite */
+    /* Segfault when ran. commenting out for docker container build */
+    /*
     for (i=3;i<8;i++) {
         if (strtype[i]==STR_FILE&&!confwrite(vt,strpath[i])) return 0;
-    }
+    }*/
     if (prcopt.refpos==4) { /* rtcm */
         for (i=0;i<3;i++) prcopt.rb[i]=0.0;
     }

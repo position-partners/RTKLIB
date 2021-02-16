@@ -9,3 +9,6 @@ Debug
 Debug_Build
 __history
 __astcache
+/.vs/RTKLIB/v16
+/.vs/ProjectSettings.json
+/.vs/slnx.sqlite
